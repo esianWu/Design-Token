@@ -1,0 +1,15 @@
+{
+  "source": ["tokens.json"],
+  "platforms": {
+    "ios-swift": {
+      "transformGroup": "ios-swift",
+      "buildPath": "build/ios/",
+      "files": [
+        {
+          "destination": "DesignToken.swift",
+          "format": "ios-swift/class.swift"
+        }
+      ]
+    }
+  }
+}
