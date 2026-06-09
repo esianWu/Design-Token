@@ -66,6 +66,13 @@ function formatSwiftValue(value, token, dictionary) {
     return formatColorString(value);
   }
 
+  if ((token.type === 'fontWeights' || token.type === 'fontSizes') && typeof value === 'string') {
+    const numericValue = Number(value);
+    if (Number.isInteger(numericValue)) {
+      return String(numericValue);
+    }
+  }
+
   if (typeof value === 'string') {
     return `"${escapeSwiftString(value)}"`;
   }
